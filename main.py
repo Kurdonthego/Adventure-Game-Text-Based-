@@ -1,11 +1,18 @@
 # Course: CS 30
 # Period: 3
-# Date created: Ocotober 2nd, 2021
-# Date modified: October 18th, 2021
+# Date created: September 10th, 2021
+# Date modified: October 28th, 2021
 # Name: Zana Osman
-# Description: Inventory System for Text-Based Adventure
-import sys
-import inventory as inv
+# Description: Main File for Text Based Adventure
+try:
+    import sys
+    import inventory as inv
+    import characters as char
+    import gamemap as mmap
+except ModuleNotFoundError:
+    print("Error, import failed")
+    print("Game ended")
+    sys.exit()
 
 # Starting function to create username for player
 print("Text-Based Adventure Menu")
@@ -14,35 +21,17 @@ Username_ = input("What shall I call you? ")
 print("Ok " + Username_ + " what would you like to do?")
 
 # Actions and directions possible
-possible_actions = ["Attack [1]", "Inventory [2]", "Explore [3]", "Heal[4]",
-                    "Character[5]", "Quit[6]"]
+possible_actions = ["[1] Attack", "[2] Inventory", "[3] Explore",
+                    "[4] Map", "[5] Quit"]
 possible_directions = ["North [1]", "East [2]", "South [3]", "West [4]"]
 
-# Characters with description
-character_selection = ["Wonder Boy [1]", "Beefy Man [2]"]
-character_s = {
-    "Wonder Boy":
-        {"Description": "A ninja raised in the forest who "
-            "chases bears in his spare time",
-            "Bonuses": "Has +3 Speed and +2 Damage points"},
-    "Beefy Man":
-        {"Description": "Average joe who might have lifted "
-            "a little too much weights",
-            "Bonuses": "Has +1 Damage and +4 Defense points"}
-            }
-
-
-# Function to write out characters plus a mini description
-def character_choice():
-    for character in character_s:
-        print(f"\n{character}")
-        for item in character_s[character]:
-            print(f"{item} - {character_s[character][item]}")
-
+# Function to choose character
+while char.chrselect:
+    char.character_selected()
 
 # While loop for menu to stay active, will not close unless 'quit' is chosen
 while True:
-    """Definition for the menu"""
+    """Function for the menu"""
     for action in possible_actions:
         print(f" {action}")
     menu_c = str(input("\nWhat action would u like to choose? "))
@@ -51,7 +40,7 @@ while True:
     elif menu_c == "2":
         print("\nInventory:")
         inv.start_inventory_fnct()
-        inv_desc = input("\nShow descriptions? \nYes [1], No [2] ") 
+        inv_desc = input("\nShow descriptions? \nYes [1], No [2] ")
         if inv_desc == "1":
             inv.inventory_description()
         else:
@@ -69,22 +58,11 @@ while True:
         elif directions_chosen == "4":
             print("Going West!")
     elif menu_c == "4":
-            print("Healing!")
-    elif menu_c == "5":
-        print("\nCharacters:")
-        character_choice()
-        character_chosen = input("\nWhich character will you choose?\n")
-        if character_chosen == "Wonder Boy":
-            print("Wonder Boy 'SELECTED'")
-            print("Great choice, Extra speed will be on your side")
-        elif character_chosen == "Beefy Man":
-            print("Beefy Man 'SELECTED'")
-            print("Excellent, Defense bonuses will come in handy")
-        else:
-            print("Maybe try to actually print a characters name correctly")
+            print("World Map")
+            mmap.print_map()
     # Quit function will work with the sys.exit command
-    elif menu_c == "6":
-        if menu_c == "6":
+    elif menu_c == "5":
+        if menu_c == "5":
             choice_s = str(input("Are you sure you would like to exit? [1] "))
             if choice_s.lower() == "1":
                 print("Exiting, Goodbye " + Username_)

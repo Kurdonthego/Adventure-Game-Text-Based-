@@ -1,4 +1,12 @@
-from time import sleep
+# Dead function, idea for later
+
+'''
+try:
+    from time import sleep
+except ModuleNotFoundError:
+    print("Error, import failed")
+    print("Game ended")
+    sys.exit()
 
 
 def intro_text(text):
@@ -7,6 +15,4 @@ def intro_text(text):
 
     for char in words:
         sleep(0.25)
-        print(char, end="", flush=True)
-
-intro_text("balls")
+        print(char, end="", flush=True) '''

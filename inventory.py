@@ -1,3 +1,10 @@
+# Course: CS 30
+# Period: 3
+# Date created: Ocotober 20th, 2021
+# Date modified: October 20th, 2021
+# Name: Zana Osman
+# Description: Inventory System for Text-Based Adventure
+
 # Inventory (Starting weapons)
 inventory_s = {
     "Small Knife":
@@ -13,14 +20,14 @@ inventory_s = {
         }
 
 
-# Function to only list name of weapons
 def start_inventory_fnct():
+    '''Function to only list name of weapons'''
     for weapon in inventory_s:
         print(f"{weapon}")
 
 
-# Function to list name of weapons plus description
 def inventory_description():
+    '''Function to list name of weapons plus description'''
     for weapon in inventory_s:
         print(f"\n{weapon}:")
         for item in inventory_s[weapon]:
