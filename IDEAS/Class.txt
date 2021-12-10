@@ -1,0 +1,84 @@
+# Course: CS 30
+# Period: 3
+# Date created: November 11th, 2021
+# Date modified: November 26th, 2021
+# Name: Zana Osman
+# Description: Class System for Text-Based Adventure
+character_selection = ["The Neutralizer [1]", "Annilator [2]"]
+
+chrselect = True
+# Description for class that user_ can choose from
+class_choice = {
+    "The Neutralizer [1]": {
+        "Description": "Man of range, bounty hunter by name, ",
+        "Bonuses and Statistics": "10% chance to hit for 1-2 more damage"
+    },
+    "Annilator [2]": {
+        "Description": "Agile ninja, raised in the woods of silence",
+        "Bonuses and Statistics": "30% more damage with melee"
+    }
+}
+
+
+class Hero():
+    def __init__(self, name, description, health, defense, bonus):
+        self.name = name
+        self.description = description
+        self.health = health
+        self.defense = defense
+        self.bonus = bonus
+
+
+def Class1():
+    print(TheNeutralizer.name)
+    print(TheNeutralizer.description)
+    print(TheNeutralizer.health)
+    print(TheNeutralizer.defense)
+    print(TheNeutralizer.bonus)
+
+
+def Class2():
+    print(Annilator.name)
+    print(Annilator.description)
+    print(Annilator.health)
+    print(Annilator.defense)
+    print(Annilator.bonus)
+
+
+TheNeutralizer = Hero(
+    'TheNeutralizer',
+    'Bounty hunter by name, Bonuses and Statistics: 10% chance to hit for 1-2 more damage',
+    100, 50, 10)
+
+Annilator = Hero('Annilator', 'Ass', 150, 20, 25)
+'''
+def class_starting():
+    Function to write out characters plus a mini description
+    for character in class_choice:
+        print(f"\n{character}")
+        for item in class_choice[character]:
+            print(f"{item} - {class_choice[character][item]}")
+'''
+
+
+def class_choice():
+    print("\n[1]"), Class1()
+    print("\n[2]"), Class2()
+
+
+def character_selected():
+    '''Function to allow user to choose charater'''
+    print("\nCharacters:")
+    global chrselect
+    class_choice()
+    character_chosen = input("\nWhich character will you choose?\n")
+    if character_chosen == "1":
+        print("\nThe Neutralizer 'SELECTED'")
+        print("\n")
+        chrselect = False
+    elif character_chosen == "2":
+        print("\nAnnilator 'SELECTED'")
+        print("Excellent, Defense bonuses will come in handy\n")
+        chrselect = False
+    else:
+        print("Maybe try to actually print a characters name correctly")

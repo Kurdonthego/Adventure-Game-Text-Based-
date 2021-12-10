@@ -1,11 +1,33 @@
 {
   "files": {
-    "gamemap.py": [
+    "Class selection": [
       {
-        "id": "6b8c067a-0710-4045-8460-9e6761c6a5ef",
-        "line": 121,
-        "version": 5579,
-        "index": 4573
+        "id": "322f44a4-1b94-43c6-b4c4-24f7da22b6b1",
+        "line": 21,
+        "version": 0,
+        "index": 720
+      }
+    ],
+    "IDEAS/Secret_Ideas.txt": [
+      {
+        "id": "2570dd76-ae18-458d-b081-2151286b0931",
+        "line": 9,
+        "version": 1,
+        "index": 188
+      }
+    ],
+    "characters.py": [
+      {
+        "id": "d6400b04-dcff-4bc6-a4bb-de43d3443da1",
+        "line": 21,
+        "version": 538,
+        "index": 667
+      },
+      {
+        "id": "619f5a7e-de16-43ea-ba31-c72d7d3e5425",
+        "line": 26,
+        "version": 538,
+        "index": 761
       }
     ]
   }

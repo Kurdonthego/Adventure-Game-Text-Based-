@@ -9,13 +9,26 @@ python-versions = "*"
 [package.extras]
 widechars = ["wcwidth"]
 
+[[package]]
+name = "tim"
+version = "0.5"
+description = "TIM: Timed Iteration Monitor"
+category = "main"
+optional = false
+python-versions = "*"
+
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "9eeb90a922bb7b1152a6d880c5ab73d30c56a8ad7b75ada5ee7f6d7e6237db13"
+content-hash = "f3a2225b5f0899f7873b737970bd42885ca86c6dfe3ff4f56a5705cb38699a50"
 
 [metadata.files]
 tabulate = [
     {file = "tabulate-0.8.9-py3-none-any.whl", hash = "sha256:d7c013fe7abbc5e491394e10fa845f8f32fe54f8dc60c6622c6cf482d25d47e4"},
     {file = "tabulate-0.8.9.tar.gz", hash = "sha256:eb1d13f25760052e8931f2ef80aaf6045a6cceb47514db8beab24cded16f13a7"},
+]
+tim = [
+    {file = "tim-0.5-py2.7.egg", hash = "sha256:a0d85c3fcddc855cd4e6c0a2e507f3d9017bc65977150fe6dafb740026a2bbed"},
+    {file = "tim-0.5-py2.py3-none-any.whl", hash = "sha256:3c0bdd6bc1263ef3ce5803ea601634ecb1dcf46524e6f0dbdbc38f4c6d8638b6"},
+    {file = "tim-0.5.tar.gz", hash = "sha256:1e626db1af5b5d4e64bcb964da184d8080225948a6195d7affcb127b4cc66996"},
 ]

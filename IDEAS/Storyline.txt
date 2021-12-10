@@ -1,0 +1,44 @@
+# Course: CS 30
+# Period: 3
+# Date created: November 25th, 2021
+# Date modified: November 26th, 2021
+# Name: Zana Osman
+# Description: Storyline File for Text-Based Adventure
+try:
+    import map as m
+except ModuleNotFoundError:
+    print("Import in Storyline failed")
+
+Entry = print(
+    '''It is the year 2054 a decade after the third world war had started, with the east and west defeated and the nuclear fog still amist in the sky it is up to you to find the files from the soviet union. With your old rusty jeep you head towards the '''
+)
+
+game_map = ('''
+   ___________________________________________________________________________________
+  |                                                       _________________           |
+  |                                                       |_______________|           |
+  |                               ___    ___________________________________          |
+  |  _____________ ______________|   Exit  |                |               |         |
+  | |             |              |____+____|___    Cell     +               |_____    |
+  | |      |      |                            |            +                     |   |
+  | |      |     1|          Main Hall         |____________|    Security Room    |   |
+  | |__++__|Safes |                                         |_________++__________|   |
+  | |      |     2|                                                               |   |
+  | |      |______|__________________________                                     |   |
+  | |                                        |          Secondary Hall            |   |
+  | |___________________________             |                                    |   |
+  | |                          |                            ______________________|   |
+  | |                          +          Hallway          |                          |
+  | |________Starting__________|___________________________|                          |
+  |                                                                                   |
+  |___________________________________________________________________________________|
+''')
+
+Hallway = ("")
+Secondary_Hall = ("")
+Main_Hall = ("")
+Safe_1 = ("")
+Safe_2 = ("")
+Cell = ("")
+Security_Room = ("")
+Exit = ("")

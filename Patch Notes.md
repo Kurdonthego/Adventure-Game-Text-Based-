@@ -98,3 +98,8 @@
 - Revised over entire code
 - Fixed small bug errors in code
 - Added try functions for imports
+
+## Classes
+
+### [1.3.1] 2021-10-29
+- Classes started

@@ -1,0 +1,43 @@
+# Course: CS 30
+# Period: 3
+# Date created: December 1st, 2021
+# Date modified: Decemeber 3rd, 2021
+# Name: Zana Osman
+# Description: Slow Text System for Text-Based Adventure
+
+try:
+    from time import sleep
+    import time
+    import sys
+except ModuleNotFoundError:
+    print("Import in 'slowtext' failed")
+    sys.exit()
+
+
+def User_Introduction():
+    print("Text-Based Adventure Menu")
+    print("Welcome user_")
+    Username_ = input("What shall I call you? ")
+    print("Ok " + Username_ + " what would you like to do?")
+
+
+Title = ("")
+Description = ("Welcome " + Username_ + " ")
+
+
+def Slow_text(text):
+    """Prints title of game in a typewriter style"""
+    words = text
+
+    for char in words:
+        sleep(0.05)
+        print(char, end="", flush=True)
+
+
+def introducion_func():
+    Slow_text(Title)
+    time.sleep(1)
+    Slow_text()
+
+
+introducion_func()
